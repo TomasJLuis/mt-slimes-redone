@@ -1,94 +1,121 @@
 -- sounds
 local green_sounds = {
-	damage = { file = "green_slime_damage", gain = 0.25},
-	death = { file = "green_slime_death", gain = 0.25},
-	jump = { file = "green_slime_jump", gain = 0.25},
-	land = { file = "green_slime_land", gain = 0.25},
-	attack = { file = "green_slime_attack", gain = 0.25},
-	random = {}
+	damage = "slimes_damage",
+	death = "slimes_death",
+	jump = "slimes_jump",
+	attack = "slimes_attack",
 }
--- textures: top, bottom, front, back, left, right
-local green_textures = {"green_slime_top.png", "green_slime_bottom.png", "green_slime_front.png", "green_slime_sides.png", "green_slime_sides.png", "green_slime_sides.png"}
 
-slimes:register_slime ("slimes:greenbig", {
-	name = "slimes:greenbig",
+-- green slime textures
+local green_textures = {"green_slime_sides.png", "green_slime_sides.png", "green_slime_sides.png", "green_slime_sides.png", "green_slime_front.png", "green_slime_sides.png"}
+
+-- register small green slime
+mobs:register_mob("slimes:greensmall", {
 	type = "monster",
-	class = "green",
+	hp_min = 1,	hp_max = 2,
+	collisionbox = {-0.25, -0.25, -0.25, 0.25, 0.25, 0.25},
+	visual = "cube",
+	visual_size = {x = 0.5, y = 0.5},
+	textures = { green_textures },
+	blood_texture = "green_slime_blood.png",
+	makes_footstep_sound = false,
+	sounds = green_sounds,
+	attack_type = "dogfight",
+	attacks_monsters = true,
+	damage = 1,
 	passive = false,
-	size = 2,
-	textures = green_textures,
-	blood = "green_slime_blood.png",
-	gravity = 9.8,
-	min_hp = 4,
-	max_hp = 6,
+	walk_velocity = 2,
+	run_velocity = 2,
+	walk_chance = 0,
+	jump_chance = 30,
+	jump_height = 6,
+	armor = 100,
+	view_range = 15,
+	drops = {
+		{name = "mesecons_materials:glue", chance = 4, min = 1, max = 2},
+	},
+	drawtype = "front",
+	water_damage = 0,
+	lava_damage = 10,
+	light_damage = 0,
+})
+mobs:register_egg("slimes:greensmall", "Small Green Slime", "green_slime_front.png", 0)
+
+-- register medium green slime
+mobs:register_mob("slimes:greenmedium", {
+	type = "monster",
+	hp_min = 3,	hp_max = 4,
+	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+	visual = "cube",
+	visual_size = {x = 1, y = 1},
+	textures = { green_textures },
+	blood_texture = "green_slime_blood.png",
+	makes_footstep_sound = false,
+	sounds = green_sounds,
+	attack_type = "dogfight",
+	attacks_monsters = true,
+	damage = 1,
+	passive = false,
+	walk_velocity = 2,
+	run_velocity = 2,
+	walk_chance = 0,
+	jump_chance = 30,
+	jump_height = 6,
+	armor = 100,
+	view_range = 15,
+	on_die = function(self, pos)
+		local num = math.random(2, 4)
+		for i=1,num do
+			minetest.add_entity({x=pos.x + math.random(-2, 2), y=pos.y + 1, z=pos.z + (math.random(-2, 2))}, "slimes:greensmall")
+		end
+	end,
+	drawtype = "front",
+	water_damage = 0,
+	lava_damage = 10,
+	light_damage = 0,
+})
+mobs:register_egg("slimes:greenmedium", "Medium Green Slime", "green_slime_front.png", 0)
+
+-- register big green slime
+mobs:register_mob("slimes:greenbig", {
+	type = "monster",
+	hp_min = 5,	hp_max = 6,
+	collisionbox = {-1, -1, -1, 1, 1, 1},
+	visual = "cube",
+	visual_size = {x = 2, y = 2},
+	textures = { green_textures },
+	blood_texture = "green_slime_blood.png",
+	makes_footstep_sound = false,
+	sounds = green_sounds,
+	attack_type = "dogfight",
+	attacks_monsters = true,
 	damage = 2,
-	sounds = green_sounds,
-	drops = {	
-		type = "entity",
-		name = "slimes:greenmedium",
-		chance = 0, min = 1, max = 2},
-	-- damage by
-	water_damage = 0,
-	lava_damage = 10,
-	light_damage = 0,
-	fall_damage = 0,
-	-- spawn block
-	spawn = "default:junglegrass"
-})
-slimes:register_slime ("slimes:greenmedium", {
-	name = "slimes:greenmedium",
-	type = "monster",
-	class ="green",
 	passive = false,
-	size = 1,
-	min_hp = 3,
-	max_hp = 4,
-	damage = 1,
-	sounds = green_sounds,
-	textures = green_textures,
-	blood = "green_slime_blood.png",
-	gravity = 9.8,
-	drop = "",
-	drops = {
-		type = "entity",
-		name = "slimes:greensmall",
-		chance = 0, min = 2, max = 4},
-	-- damage by
+	walk_velocity = 2,
+	run_velocity = 2,
+	walk_chance = 0,
+	jump_chance = 30,
+	jump_height = 6,
+	armor = 100,
+	view_range = 15,
+	on_die = function(self, pos)
+		local num = math.random(1, 2)
+		for i=1,num do
+			minetest.add_entity({x=pos.x + math.random(-2, 2), y=pos.y + 1, z=pos.z + (math.random(-2, 2))}, "slimes:greenmedium")
+		end
+	end,
+	drawtype = "front",
 	water_damage = 0,
 	lava_damage = 10,
 	light_damage = 0,
-	fall_damage = 0,
-	spawn = "default:junglegrass"
 })
-slimes:register_slime ("slimes:greensmall", {
-	name = "slimes:greensmall",
-	type = "monster",
-	class ="green",
-	passive = false,
-	size = 0.5,
-	min_hp = 1,
-	max_hp = 2,
-	damage = 1,
-	sounds = green_sounds,
-	textures = green_textures,
-	blood = "green_slime_blood.png",
-	gravity = 9.8,
-	drop = "mesecons_materials:glue 1",
-	drops = {
-		type = "item",
-		name = "mesecons_materials:glue 1",
-		chance = 4, min = 1, max = 2},
-	-- damage by
-	water_damage = 0,
-	lava_damage = 10,
-	light_damage = 0,
-	fall_damage = 0,
-	spawn = "default:junglegrass"
-})
+mobs:register_egg("slimes:greenbig", "Big Green Slime", "green_slime_front.png", 0)
 
-slimes:register_spawn("slimes:greenbig", {"default:junglegrass"},{"air","default:junglegrass"}, 20, 4, 5000, 8, 32000)
-slimes:register_spawn("slimes:greenmedium", {"default:junglegrass"},{"air","default:junglegrass"}, 20, 4, 10000, 8, 32000)
-slimes:register_spawn("slimes:greensmall", {"default:junglegrass"},{"air","default:junglegrass"}, 20, 4, 15000, 8, 32000)
-slimes:register_spawn("slimes:greenmedium", {"default:mossycobble"},{"air"}, 20, 4, 10000, 8, 32000)
-slimes:register_spawn("slimes:greensmall", {"default:mossycobble"},{"air"}, 20, 4, 10000, 8, 32000)
+--mobs:spawn_specific(name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height)
+mobs:spawn_specific("slimes:greenbig", {"default:junglegrass"},{"air","default:junglegrass"}, 4, 20, 30, 5000, 8, 0, 32000)
+mobs:spawn_specific("slimes:greenmedium", {"default:junglegrass"},{"air","default:junglegrass"}, 4, 20, 30, 10000, 8, 0, 32000)
+mobs:spawn_specific("slimes:greensmall", {"default:junglegrass"},{"air","default:junglegrass"}, 4, 4, 30, 15000, 8, 0, 32000)
 
+--mobs:register_spawn(name, nodes, max_light, min_light, chance, active_object_count, max_height)
+mobs:register_spawn("slimes:greenmedium", {"default:mossycobble"}, 20, 4, 10000, 8, 32000)
+mobs:register_spawn("slimes:greensmall", {"default:mossycobble"}, 20, 4, 10000, 8, 32000)
