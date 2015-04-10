@@ -31,9 +31,9 @@ Lava slimes:
 
 Install
 ===========================================================================
-Unzip the archive an place it in minetest-base-directory/mods/minetest/
+Unzip the archive an place it in minetest-base-directory/mods/slimes/
 If you have a windows client or a linux run-in-place client.
-If you have a linux system-wide instalation place it in ~/.minetest/mods/minetest/.
+If you have a linux system-wide instalation place it in ~/.minetest/mods/slimes/.
 If you want to install this mod only in one world create the folder worldmods/ in your world directory.
 For further information or help see: http://wiki.minetest.com/wiki/Installing_Mods
 
@@ -76,15 +76,18 @@ http://www.freesound.org/people/RandomationPictures/sounds/138481/
 - Original sounds for slime jump, land and death by Dr. Minky under licence CC BY 3.0.
 http://www.freesound.org/people/DrMinky/sounds/
 
-- Source code and images by Tomas J. Luis under WTFPL.
+- Source code and images by TomasJLuis under WTFPL.
 
-         DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
+          DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                    Version 2, December 2004 
 
- Everyone is permitted to copy and distribute verbatim or modified
- copies of this license document, and changing it is allowed as long
- as the name is changed.
+ Copyright (C) 2004 Sam Hocevar <sam@hocevar.net> 
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+ Everyone is permitted to copy and distribute verbatim or modified 
+ copies of this license document, and changing it is allowed as long 
+ as the name is changed. 
 
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
