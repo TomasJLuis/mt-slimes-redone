@@ -1,3 +1,5 @@
+-- Lava Slimes by TomasJLuis
+
 -- sounds
 local lava_sounds = {
 	damage = "slimes_damage",
@@ -29,7 +31,7 @@ mobs:register_mob("slimes:lavasmall", {
 	walk_chance = 0,
 	jump_chance = 30,
 	jump_height = 6,
-	armor = 100,
+	armor = 90,
 	view_range = 15,
 	drops = {
 		{name = "tnt:gunpowder", chance = 4, min = 1, max = 2},
@@ -41,7 +43,7 @@ mobs:register_mob("slimes:lavasmall", {
 	replace_rate = 20,
 	footstep = "fire:basic_flame",
 })
-mobs:register_egg("slimes:lavasmall", "Small Lava Slime", "lava_slime_front.png", 0)
+mobs:register_egg("slimes:lavasmall", "Small Lava Slime", "lava_slime_egg.png", 1)
 
 -- register medium lava slime
 mobs:register_mob("slimes:lavamedium", {
@@ -63,7 +65,7 @@ mobs:register_mob("slimes:lavamedium", {
 	walk_chance = 0,
 	jump_chance = 30,
 	jump_height = 6,
-	armor = 100,
+	armor = 90,
 	view_range = 15,
 	on_die = function(self, pos)
 		local num = math.random(2, 4)
@@ -78,7 +80,7 @@ mobs:register_mob("slimes:lavamedium", {
 	replace_rate = 20,
 	footstep = "fire:basic_flame",
 })
-mobs:register_egg("slimes:lavamedium", "Medium Lava Slime", "lava_slime_front.png", 0)
+mobs:register_egg("slimes:lavamedium", "Medium Lava Slime", "lava_slime_egg.png", 1)
 
 -- register big lava slime
 mobs:register_mob("slimes:lavabig", {
@@ -100,7 +102,7 @@ mobs:register_mob("slimes:lavabig", {
 	walk_chance = 0,
 	jump_chance = 30,
 	jump_height = 6,
-	armor = 100,
+	armor = 90,
 	view_range = 15,
 	on_die = function(self, pos)
 		local num = math.random(1, 2)
@@ -116,7 +118,7 @@ mobs:register_mob("slimes:lavabig", {
 	replace_offset = -1,
 	footstep = "fire:basic_flame",
 })
-mobs:register_egg("slimes:lavabig", "Big Lava Slime", "lava_slime_front.png", 0)
+mobs:register_egg("slimes:lavabig", "Big Lava Slime", "lava_slime_egg.png", 1)
 
 --mobs:spawn_specific(name, nodes, neighbors, min_light, max_light, interval, chance, active_object_count, min_height, max_height)
 

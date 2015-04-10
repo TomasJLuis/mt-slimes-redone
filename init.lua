@@ -1,4 +1,7 @@
--- Slimes by TenPlus1 and TomasJLuis
+-- Slimes by TomasJLuis
+-- Migration to Mobs Redo API by TenPlus1
+
+-- load mod files
 dofile(minetest.get_modpath("slimes").."/greenslimes.lua")
 dofile(minetest.get_modpath("slimes").."/lavaslimes.lua")
 
@@ -11,3 +14,4 @@ if not minetest.get_modpath("mesecons_materials") then
 end
 
 if minetest.setting_get("log_mods") then minetest.log("action", "Slimes loaded") end
+
