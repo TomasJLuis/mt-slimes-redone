@@ -7,8 +7,11 @@ This mod adds two type of mobs in the world of Minetest: green slimes and lava s
 
 Green slimes live in the tall grass of the jungles and in the ancient ruins of lost temples. And lava slimes live deep underground near the lava pools.
 
-I've made this mod inspired by this other mod: https://forum.minetest.net/viewtopic.php?f=11&t=2979&hilit=slimes which adds friendly
-slimes. Thank you Jeija!
+Hope you like it!
+
+Special thanks:
+@TenPlus1, for all your help and amazing work to integrate Slimes with Mobs Redo.
+@Jeija, for the original slimes mod (viewtopic.php?f=11&t=2979).
 
 Details
 ===========================================================================
@@ -16,7 +19,11 @@ Details
 - They attack players and hurt them on touch.
 - The biger ones split in a random amout of smaller versions when defeated: big > medium > small.
 - They use custom textures and sounds. (more work needs to be done here ;P)
-- Thanks to the use of Mobs Redo API (Thank you TenPlus1 for all your help and amazing work), the slimes have all the benefits of the other mobs: IA to search and attack players, enviromental damage, easy configuration and more.
+- Thanks to the use of Mobs Redo API, the slimes have all the benefits of the other mobs included in the original:
+> IA to search and attack players
+> Enviromental damage
+> Easy configuration
+  ... and more.
 
 Green slimes:
   > spawn in jungle grass or in temples mossy cobble (default:mossycobble).
@@ -49,14 +56,15 @@ Version: 0.2
 Required Minetest Version: >=0.4.12
 Dependencies: default, tnt, mobs redo >=1.09 (https://forum.minetest.net/viewtopic.php?f=9&t=9917)
 Soft Dependencies: (none)
-Highly Recommended: mesecon_materials (https://forum.minetest.net/viewtopic.php?f=11&t=628&hilit=mesecon)
+Highly Recommended: mesecon_materials (https://forum.minetest.net/viewtopic.php?f=11&t=628)
 Craft Recipies: (none)
-Git Repo: https://github.com/TomasJLuis/mt-slimes-redone branch: mobsredoapi
+Git Repo: https://github.com/TomasJLuis/mt-slimes-redone
+Minetest.net Forum:  https://forum.minetest.net/viewtopic.php?f=9&t=11743
 
 Modders/Developers
 ===========================================================================
 If you are a modder, you should know that I've never used LUA before. this is my first mod for Mintetest, and I've used this mod to learn how to mod on Minetest. So may be you will find a code full of mistakes and bad practices... ;P
-If you spot someting that can/must be improved/changed/removed and want to help me to improve this mode and my knowledge, please report to me on GitHub or on Minetest forum (https://forum.minetest.net/viewtopic.php?f=9&t=11743&p=175186#p175186)
+If you spot someting that can/must be improved/changed/removed and want to help me to improve this mode and my knowledge, please report to me on GitHub or on Minetest forum.
 Thank you!
 
 Version history
