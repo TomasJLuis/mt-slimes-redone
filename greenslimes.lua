@@ -1,4 +1,4 @@
--- Green Slimes by TomasJLuis
+-- Green Slimes by TomasJLuis & TenPlus1
 
 -- sounds
 local green_sounds = {

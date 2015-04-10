@@ -1,4 +1,4 @@
--- Lava Slimes by TomasJLuis
+-- Lava Slimes by TomasJLuis & TenPlus1
 
 -- sounds
 local lava_sounds = {
