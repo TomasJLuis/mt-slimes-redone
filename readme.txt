@@ -12,11 +12,11 @@ slimes. Thank you Jeija!
 
 Details
 ===========================================================================
-- Adds two new hostile mobs: green slimes and lava slimes.
+- This mod adds two new hostile mobs: green slimes and lava slimes.
 - They attack players and hurt them on touch.
 - The biger ones split in a random amout of smaller versions when defeated: big > medium > small.
-- Thaks to Mob Redo API they can get different enviromental damage: water, lava, sunlight and falling.
 - They use custom textures and sounds. (more work needs to be done here ;P)
+- Thanks to the use of Mobs Redo API (Thank you TenPlus1 for all your help and amazing work), the slimes have all the benefits of the other mobs: IA to search and attack players, enviromental damage, easy configuration and more.
 
 Green slimes:
   > spawn in jungle grass or in temples mossy cobble (default:mossycobble).
@@ -39,7 +39,7 @@ For further information or help see: http://wiki.minetest.com/wiki/Installing_Mo
 
 How to use the mod:
 ===========================================================================
-1. Install Mobs Redo >= 1.9
+1. Install Mobs Redo >= 1.09
 2. Install Slimes Redo.
 3. Enjoy
 
@@ -47,7 +47,7 @@ Mod Information
 ===========================================================================
 Version: 0.2
 Required Minetest Version: >=0.4.12
-Dependencies: default, tnt, mobs redo >=1.9 (https://forum.minetest.net/viewtopic.php?f=9&t=9917)
+Dependencies: default, tnt, mobs redo >=1.09 (https://forum.minetest.net/viewtopic.php?f=9&t=9917)
 Soft Dependencies: (none)
 Highly Recommended: mesecon_materials (https://forum.minetest.net/viewtopic.php?f=11&t=628&hilit=mesecon)
 Craft Recipies: (none)
