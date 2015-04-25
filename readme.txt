@@ -46,15 +46,15 @@ For further information or help see: http://wiki.minetest.com/wiki/Installing_Mo
 
 How to use the mod:
 ===========================================================================
-1. Install Mobs Redo >= 1.09
+1. Install Mobs Redo >= 1.10
 2. Install Slimes Redo.
 3. Enjoy
 
 Mod Information
 ===========================================================================
-Version: 0.2
+Version: 0.2.1
 Required Minetest Version: >=0.4.12
-Dependencies: default, tnt, mobs redo >=1.09 (https://forum.minetest.net/viewtopic.php?f=9&t=9917)
+Dependencies: default, tnt, mobs redo >=1.10 (https://forum.minetest.net/viewtopic.php?f=9&t=9917)
 Soft Dependencies: (none)
 Highly Recommended: mesecon_materials (https://forum.minetest.net/viewtopic.php?f=11&t=628)
 Craft Recipies: (none)
@@ -69,6 +69,7 @@ Thank you!
 
 Version history
 ===========================================================================
+0.2.1 - Updated to Mob Redo API 1.10
 0.2 - Now using Mob Redo API (Thank you TenPlus1). Changed mod name to Slimes Redo to reflect better this.
 0.1 - Initial release
 
