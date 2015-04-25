@@ -41,6 +41,7 @@ mobs:register_mob("slimes:lavasmall", {
 	lava_damage = 0,
 	light_damage = 0,
 	replace_rate = 20,
+	replace_what = {"air"},	
 	footstep = "fire:basic_flame",
 })
 mobs:register_egg("slimes:lavasmall", "Small Lava Slime", "lava_slime_egg.png", 1)
@@ -78,6 +79,7 @@ mobs:register_mob("slimes:lavamedium", {
 	lava_damage = 0,
 	light_damage = 0,
 	replace_rate = 20,
+	replace_what = {"air"},
 	footstep = "fire:basic_flame",
 })
 mobs:register_egg("slimes:lavamedium", "Medium Lava Slime", "lava_slime_egg.png", 1)
@@ -116,6 +118,7 @@ mobs:register_mob("slimes:lavabig", {
 	light_damage = 0,
 	replace_rate = 20,
 	replace_offset = -1,
+	replace_what = {"air"},
 	footstep = "fire:basic_flame",
 })
 mobs:register_egg("slimes:lavabig", "Big Lava Slime", "lava_slime_egg.png", 1)
